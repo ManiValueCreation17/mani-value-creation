@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mani Value Creation | Wealth & Investment</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cream: '#fdfbf7', // Vastu Earth Element - Stability
+                        lightBlue: '#e0f2fe', // Vastu Water Element - Wealth Flow
+                        navy: '#1e3a8a', // Trust and Professionalism
+                        gold: '#d97706', // Prosperity
+                        whatsapp: '#25D366',
+                        telegram: '#0088cc',
+                        instagram: '#E1306C'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fdfbf7;
+        }
+        /* Custom Scrollbar for better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdfbf7; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706; 
+        }
+        /* Glassmorphism for floating buttons */
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased font-sans relative">
+
+    <!-- Promotional Pop-up Modal -->
+    <div id="promoModal" class="fixed inset-0 z-[100] hidden bg-gray-900 bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden transform scale-95 transition-transform duration-300 relative" id="modalContent">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="bg-gradient-to-r from-navy to-blue-700 p-6 text-center">
+                <div class="inline-block p-3 bg-white rounded-full text-gold mb-3 shadow-lg">
+                    <i class="fas fa-gift text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-1">🎉 Offer for Today!</h3>
+            </div>
+            
+            <div class="p-6 text-center bg-cream">
+                <p class="text-gray-700 text-lg mb-4 font-medium">Start your investment journey today.</p>
+                <div class="bg-lightBlue border border-blue-200 rounded-lg p-4 mb-6">
+                    <p class="text-navy font-bold text-xl">Free Demat Account Opening</p>
+                    <p class="text-gray-600 mt-2 font-medium">with <span class="text-gold font-bold text-lg">₹10/order</span> only!</p>
+                </div>
+                
+                <a href="https://lemonn.co.in/affiliate-deeplink?data=5bzi4w" target="_blank" 
+                   class="inline-block w-full bg-navy hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:-translate-y-1 shadow-lg text-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-external-link-alt text-xl"></i> Join Now
+                </a>
+                <p class="text-xs text-gray-500 mt-3">*Limited time offer. T&C apply.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation (North-East: Brand Identity) -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-10 h-10 bg-navy text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md">
+                    M
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl md:text-2xl text-navy tracking-tight leading-none">Mani Value Creation</h1>
+                    <p class="text-xs text-gold font-semibold uppercase tracking-wider mt-1">Grow Your Wealth</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium text-gray-600">
+                <a href="#services" class="hover:text-navy transition-colors">Services</a>
+                <a href="#about" class="hover:text-navy transition-colors">About</a>
+                <a href="https://wa.me/918153896288" target="_blank" class="bg-navy text-white px-5 py-2.5 rounded-full hover:bg-blue-800 transition-colors shadow-md flex items-center gap-2">
+                    <i class="fas fa-headset"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden bg-cream">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-lightBlue opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-50 border border-blue-100 text-navy text-sm font-semibold mb-6 animate-fade-in">
+                    <i class="fas fa-chart-line mr-2"></i> Your Trusted Financial Partner
+                </span>
+                <h2 class="text-4xl md:text-6xl font-extrabold text-navy mb-6 leading-tight animate-fade-in" style="animation-delay: 0.1s;">
+                    Smart Investments for a <br class="hidden md:block"/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-navy to-blue-500">Secure Future</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
+                    Expert guidance in stock market, portfolio management, unlisted pre-IPO shares, and comprehensive insurance planning tailored just for you.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style="animation-delay: 0.3s;">
+                    <button onclick="openModal()" class="bg-navy text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Open Free Demat Account
+                    </button>
+                    <a href="#services" class="bg-white border-2 border-navy text-navy px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all shadow-sm">
+                        Explore Services
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-16 pt-8 border-t border-gray-200 flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
+                    <div class="flex items-center gap-2 font-semibold text-gray-600"><i class="fas fa-lock text-navy"></i> 100% Secure</div>
+                    <div class="flex items-center gap-2 font-semibold text-gray-600"><i class="fas fa-bolt text-gold"></i> Fast Execution</div>
+                    <div class="flex items-center gap-2 font-semibold text-gray-600"><i class="fas fa-percent text-whatsapp"></i> Lowest Brokerage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Our Premium Services</h2>
+                <div class="h-1 w-20 bg-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer a comprehensive suite of financial services to help you grow, manage, and protect your wealth efficiently.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cream p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-lightBlue rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy transition-colors">
+                        <i class="fas fa-laptop-code text-2xl text-navy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Demat & Trading Account</h3>
+                    <p class="text-gray-600 mb-4">Experience seamless trading with our platform. Enjoy the <span class="font-semibold text-navy">lowest brokerage rates (₹10/order)</span> and lightning-fast execution.</p>
+                    <a href="https://lemonn.co.in/affiliate-deeplink?data=5bzi4w" target="_blank" class="text-navy font-semibold hover:text-gold flex items-center gap-2">
+                        Open Account <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cream p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-lightBlue rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy transition-colors">
+                        <i class="fas fa-chart-pie text-2xl text-navy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Portfolio Analysis</h3>
+                    <p class="text-gray-600 mb-4">Get in-depth insights into your existing investments. We help you rebalance and optimize your portfolio for maximum returns.</p>
+                    <a href="https://wa.me/918153896288?text=I%20need%20Portfolio%20Analysis" target="_blank" class="text-navy font-semibold hover:text-gold flex items-center gap-2">
+                        Analyze Now <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-cream p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-lightBlue rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy transition-colors">
+                        <i class="fas fa-compass text-2xl text-navy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Investment Planning</h3>
+                    <p class="text-gray-600 mb-4">Customized financial roadmaps designed to meet your short-term needs and long-term life goals with calculated risk.</p>
+                    <a href="https://wa.me/918153896288?text=I%20am%20looking%20for%20Investment%20Planning" target="_blank" class="text-navy font-semibold hover:text-gold flex items-center gap-2">
+                        Plan Wealth <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-cream p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-lightBlue rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy transition-colors">
+                        <i class="fas fa-rocket text-2xl text-navy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Unlisted Stocks (Pre-IPO)</h3>
+                    <p class="text-gray-600 mb-4">Gain early access to high-growth potential companies before they hit the public market. Maximize your wealth creation.</p>
+                    <a href="https://wa.me/918153896288?text=I%20want%20to%20invest%20in%20Unlisted%20Pre-IPO%20Stocks" target="_blank" class="text-navy font-semibold hover:text-gold flex items-center gap-2">
+                        Explore Stocks <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-cream p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 lg:col-span-2 xl:col-span-1">
+                    <div class="w-14 h-14 bg-lightBlue rounded-xl flex items-center justify-center mb-6 group-hover:bg-navy transition-colors">
+                        <i class="fas fa-shield-alt text-2xl text-navy group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Insurance Solutions</h3>
+                    <p class="text-gray-600 mb-4">Protect your family's future and your hard-earned assets with our comprehensive life and general insurance advisory.</p>
+                    <a href="https://wa.me/918153896288?text=I%20need%20details%20about%20Insurance" target="_blank" class="text-navy font-semibold hover:text-gold flex items-center gap-2">
+                        Secure Future <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Quick Contact Banner -->
+                <div class="bg-gradient-to-br from-navy to-blue-800 p-8 rounded-2xl shadow-lg flex flex-col justify-center text-white relative overflow-hidden lg:col-span-1 xl:col-span-1">
+                    <div class="absolute -right-6 -bottom-6 text-white opacity-10">
+                        <i class="fas fa-phone-volume text-9xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 relative z-10">Need Expert Advice?</h3>
+                    <p class="text-blue-200 mb-6 relative z-10">Let's discuss your financial goals over a quick call.</p>
+                    <a href="tel:+918153896288" class="bg-white text-navy font-bold py-3 px-6 rounded-lg text-center hover:bg-cream transition-colors relative z-10 flex items-center justify-center gap-2">
+                        <i class="fas fa-phone"></i> +91 81538 96288
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-white text-navy rounded flex items-center justify-center font-bold text-lg">M</div>
+                        <h2 class="font-bold text-2xl">Mani Value Creation</h2>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Your dedicated partner in wealth creation. We provide transparent, effective, and personalized investment strategies.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 border-b border-gray-700 pb-2 inline-block">Quick Links</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-gold"></i> Demat Account</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-gold"></i> Portfolio Analysis</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-gold"></i> Pre-IPO Stocks</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-gold"></i> Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 border-b border-gray-700 pb-2 inline-block">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone-alt mt-1 text-gold"></i>
+                            <div>
+                                <p>Call or WhatsApp</p>
+                                <a href="tel:+918153896288" class="text-white font-medium hover:text-lightBlue">+91 81538 96288</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-gold"></i>
+                            <div>
+                                <p>Email Us</p>
+                                <a href="mailto:info@manivaluecreation.com" class="text-white font-medium hover:text-lightBlue">info@manivaluecreation.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between text-gray-500 text-sm">
+                <p>&copy; <span id="currentYear"></span> Mani Value Creation. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed according to Vastu Principles for Growth.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- South-East Floating Action Buttons (Fire/Action Zone) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/918153896288?text=Hello%20Mani%20Value%20Creation,%20I%20have%20an%20inquiry." target="_blank" 
+           class="w-14 h-14 bg-whatsapp text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 relative group"
+           aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute right-full mr-4 bg-gray-800 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                WhatsApp Us
+            </span>
+        </a>
+        
+        <!-- Telegram -->
+        <a href="https://t.me/" target="_blank" 
+           class="w-12 h-12 bg-telegram text-white rounded-full flex items-center justify-center text-2xl shadow-[0_4px_15px_rgba(0,136,204,0.4)] hover:scale-110 transition-transform duration-300 ml-auto relative group"
+           aria-label="Message on Telegram">
+            <i class="fab fa-telegram-plane"></i>
+            <span class="absolute right-full mr-4 bg-gray-800 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Telegram
+            </span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/" target="_blank" 
+           class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white rounded-full flex items-center justify-center text-2xl shadow-[0_4px_15px_rgba(225,48,108,0.4)] hover:scale-110 transition-transform duration-300 ml-auto relative group"
+           aria-label="Follow on Instagram">
+            <i class="fab fa-instagram"></i>
+            <span class="absolute right-full mr-4 bg-gray-800 text-white text-sm px-3 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Instagram
+            </span>
+        </a>
+    </div>
+
+    <!-- JavaScript for Pop-up and dynamic year -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const modal = document.getElementById('promoModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        // Function to open Modal with animation
+        function openModal() {
+            modal.classList.remove('hidden');
+            // Slight delay to allow display block to apply before animating opacity
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        // Function to close Modal with animation
+        function closeModal() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            // Wait for animation to finish before hiding element
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Show pop-up on page load (Wait for 1.5 seconds so user sees the background first)
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                // Check if user has already closed it in this session to prevent annoyance (optional)
+                if(!sessionStorage.getItem('promoSeen')) {
+                    openModal();
+                    sessionStorage.setItem('promoSeen', 'true');
+                } else {
+                    // For demo purposes, we will always show it. 
+                    // In real world, you might want to uncomment the logic above.
+                    openModal();
+                }
+            }, 1500); 
+        });
+
+        // Close modal if clicked outside the content box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
